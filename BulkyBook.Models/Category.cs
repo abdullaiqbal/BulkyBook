@@ -15,6 +15,7 @@ namespace BulkyBook.Models
         public string DisplayOrder { get; set; }
         public DateTime CreatedDateTime { get; set; } = DateTime.Now;
 
+        // This is just for testing
         //private int _test;
         //public int Test { 
         //    get 
