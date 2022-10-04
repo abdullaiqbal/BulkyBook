@@ -20,24 +20,24 @@ namespace BulkyBook.Models
         public string Author { get; set; }
         [Required]
         [Range(1,10000)]
-        public string ListPrice { get; set; }
+        public Double ListPrice { get; set; }
         [Required]
         [Range(1, 10000)]
-        public string Price { get; set; }
+        public Double Price { get; set; }
         [Required]
         [Range(1, 10000)]
-        public string Price50 { get; set; }
+        public Double Price50 { get; set; }
         [Required]
         [Range(1, 10000)]
-        public string Price100 { get; set; }
+        public Double Price100 { get; set; }
         public string ImageUrl { get; set; }
         [Required]
         public int CategoryId { get; set; }
-        [ForeignKey("CategoryId")]
+        
         public Category Category { get; set; }
         [Required]
         public int CoverTypeId { get; set; }
-        [ForeignKey("CategoryId")]
+        
         public CoverType CoverType { get; set; }
     }
 }

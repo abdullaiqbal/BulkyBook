@@ -5,15 +5,16 @@ using BulkyBook.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BulkyBook.DataAccess.Repositry
 {
-    public class CoverTypeRepositry : Repositry<CoverType>, ICoverTypeRepositry
+    public class ProductRepositry : Repositry<Product>, IProductRepositry
     {
         private ApplicationDbContext _Db;
-        public CoverTypeRepositry(ApplicationDbContext db) : base(db)
+        public ProductRepositry(ApplicationDbContext db) : base(db)
         {
             _Db = db;
         }
@@ -22,9 +23,28 @@ namespace BulkyBook.DataAccess.Repositry
         //    _Db.SaveChanges();
         //}
 
-        public void Update(CoverType obj)
+        public void Update(Product obj)
         {
-            _Db.CoverType.Update(obj);
+            var objFromDb = _Db.Products.FirstOrDefault(u => u.Id == obj.Id);
+            if (objFromDb != null)
+            {
+                objFromDb.Title=obj.Title;
+                objFromDb.Description=obj.Description;
+                objFromDb.ISBN=obj.ISBN;
+                objFromDb.Price=obj.Price;
+                objFromDb.Price50=obj.Price50;
+                objFromDb.Price100=obj.Price100;
+                objFromDb.ListPrice = obj.ListPrice;
+                objFromDb.CategoryId=obj.CategoryId;
+                objFromDb.CoverTypeId=obj.CoverTypeId;
+                objFromDb.Author=obj.Author;
+                if (obj.ImageUrl != null)
+                {
+                    objFromDb.ImageUrl=obj.ImageUrl;
+                }
+
+            }
+            //_Db.Products.Update(obj);
         }
     }
 }
