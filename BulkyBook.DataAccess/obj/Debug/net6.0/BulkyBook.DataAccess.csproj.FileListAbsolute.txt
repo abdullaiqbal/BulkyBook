@@ -4,6 +4,7 @@ C:\Users\THE FUTURE TECH\source\repos\BulkyBook\BulkyBook.DataAccess\obj\Debug\n
 C:\Users\THE FUTURE TECH\source\repos\BulkyBook\BulkyBook.DataAccess\obj\Debug\net6.0\BulkyBook.DataAccess.AssemblyInfo.cs
 C:\Users\THE FUTURE TECH\source\repos\BulkyBook\BulkyBook.DataAccess\obj\Debug\net6.0\BulkyBook.DataAccess.csproj.CoreCompileInputs.cache
 C:\Users\THE FUTURE TECH\source\repos\BulkyBook\BulkyBook.DataAccess\bin\Debug\net6.0\BulkyBook.DataAccess.deps.json
+C:\Users\THE FUTURE TECH\source\repos\BulkyBook\BulkyBook.DataAccess\bin\Debug\net6.0\BulkyBook.DataAccess.runtimeconfig.json
 C:\Users\THE FUTURE TECH\source\repos\BulkyBook\BulkyBook.DataAccess\bin\Debug\net6.0\BulkyBook.DataAccess.dll
 C:\Users\THE FUTURE TECH\source\repos\BulkyBook\BulkyBook.DataAccess\bin\Debug\net6.0\BulkyBook.DataAccess.pdb
 C:\Users\THE FUTURE TECH\source\repos\BulkyBook\BulkyBook.DataAccess\bin\Debug\net6.0\BulkyBook.Models.dll
@@ -12,6 +13,5 @@ C:\Users\THE FUTURE TECH\source\repos\BulkyBook\BulkyBook.DataAccess\obj\Debug\n
 C:\Users\THE FUTURE TECH\source\repos\BulkyBook\BulkyBook.DataAccess\obj\Debug\net6.0\BulkyBook.DataAccess.dll
 C:\Users\THE FUTURE TECH\source\repos\BulkyBook\BulkyBook.DataAccess\obj\Debug\net6.0\refint\BulkyBook.DataAccess.dll
 C:\Users\THE FUTURE TECH\source\repos\BulkyBook\BulkyBook.DataAccess\obj\Debug\net6.0\BulkyBook.DataAccess.pdb
-C:\Users\THE FUTURE TECH\source\repos\BulkyBook\BulkyBook.DataAccess\obj\Debug\net6.0\ref\BulkyBook.DataAccess.dll
-C:\Users\THE FUTURE TECH\source\repos\BulkyBook\BulkyBook.DataAccess\bin\Debug\net6.0\BulkyBook.DataAccess.runtimeconfig.json
 C:\Users\THE FUTURE TECH\source\repos\BulkyBook\BulkyBook.DataAccess\obj\Debug\net6.0\BulkyBook.DataAccess.genruntimeconfig.cache
+C:\Users\THE FUTURE TECH\source\repos\BulkyBook\BulkyBook.DataAccess\obj\Debug\net6.0\ref\BulkyBook.DataAccess.dll

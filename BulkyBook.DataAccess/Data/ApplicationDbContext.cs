@@ -2,7 +2,7 @@
 //using BulkyBookWeb.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace BulkyBookWeb.Data
+namespace BulkyBook.DataAccess.Data
 {
     public class ApplicationDbContext : DbContext
     {
@@ -10,6 +10,7 @@ namespace BulkyBookWeb.Data
         {
 
         }
-        public DbSet<Category> Categories { get; set; } 
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<CoverType> CoverType { get; set; }
     }
 }

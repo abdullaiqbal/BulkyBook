@@ -1,4 +1,7 @@
-using BulkyBookWeb.Data;
+using BulkyBook.DataAccess.Data;
+using BulkyBook.DataAccess.Repositry;
+using BulkyBook.DataAccess.Repositry.IRepositry;
+//using BulkyBookWeb.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -10,6 +13,8 @@ var mvcBuilder = builder.Services.AddRazorPages();
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+//builder.Services.AddScoped<ICategoryRepositry, CategoryRepositry>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 var app = builder.Build();
 
 //Calling AddRazorRuntimeCompilation
@@ -35,6 +40,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{area=Customer}/{controller=Home}/{action=Index}/{id?}");
+    
 
 app.Run();
