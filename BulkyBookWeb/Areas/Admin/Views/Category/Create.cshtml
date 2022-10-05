@@ -4,11 +4,11 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1 class="center">Category</h1>
 
-<h4>Category</h4>
+<h4 class="center">Create The Category</h4>
 <hr />
-<div class="border p-3  mt-4">
+<div class="border p-3  mt-4 center">
     <div class="row pb-2 ">
         <form asp-action="Create" class="form-group row align-items-center" method="post">
             <div asp-validation-summary="All" class="text-danger"></div>
@@ -32,8 +32,11 @@
                 <input asp-for="CreatedDateTime" class="form-control" />
                 <span asp-validation-for="CreatedDateTime" class="text-danger"></span>
             </div>*@
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+            <span>
+                <br />
+            </span>
+            <div class="form-group center"> 
+                <input type="submit" value="Create" class="btn btn-primary btn-size" />
             </div>
         </form>
     </div>

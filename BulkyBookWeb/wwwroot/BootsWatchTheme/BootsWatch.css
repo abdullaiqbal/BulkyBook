@@ -91,6 +91,16 @@
     }
 }
 
+.btn-size{
+    width:150px;
+}
+
+.center {
+    /*border: 0px solid #FFFF00;*/
+    display: flex;
+    justify-content: center;
+}
+
 body {
     margin: 0;
     font-family: var(--bs-body-font-family);

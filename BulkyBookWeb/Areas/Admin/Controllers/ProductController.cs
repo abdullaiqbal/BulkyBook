@@ -1,10 +1,14 @@
 ﻿using BulkyBook.DataAccess.Repositry.IRepositry;
 using BulkyBook.Models;
+//using BulkyBook.Models.ViewModel;
 //using BulkyBookWeb.Data;
 using BulkyBook.DataAccess.Data;
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using BulkyBook.Models.ViewModels;
+
 
 namespace BulkyBookWeb.Areas.Admin.Controllers
 {
@@ -59,26 +63,86 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
 
             return View(details);
         }
+
+        //Upsert means to update
         [HttpGet]
-        public IActionResult Edit(int? id)
+        public IActionResult Upsert(int? id)
         {
-            if (id == null)
+            ProductVM productVm = new();
+            productVm.CategoryList = _unitofwork.Category.GetAll().Select(u => new SelectListItem
             {
-                return NotFound();
+                Text = u.Name,
+                Value = u.Id.ToString()
+            });
+            productVm.CoverTypeList = _unitofwork.CoverType.GetAll().Select(u => new SelectListItem
+            {
+                Text = u.Name,
+                Value = u.Id.ToString()
+            });
+            //ProductVM productVM = new()
+            //{
+            //    Product = new(),
+            //    //CategoryList = _unitofwork.Category.GetAll().Select(
+            //    //u => new SelectListItem
+            //    //{
+            //    //    Text = u.Name,
+            //    //    Value = u.Id.ToString()
+            //    //}),
+            //    CategoryList = _unitofwork.Category.GetAll().Select(
+            //        i => new SelectListItem
+            //        {
+            //            Text = i.Name,
+            //            Value = i.Id.ToString()
+            //        }),
+            //    CoverTypeList = (IEnumerable<CoverType>)_unitofwork.CoverType.GetAll().Select(
+            //    u => new SelectListItem
+            //    {
+            //        Text = u.Name,
+            //        Value = u.Id.ToString()
+            //    })
+
+            //};
+            //Product product = new();
+            //IEnumerable<SelectListItem> categoryList = _unitofwork.Category.GetAll().Select(
+            //    u => new SelectListItem
+            //    {
+            //        Text = u.Name,
+            //        Value = u.Id.ToString()
+            //    });
+            //IEnumerable<SelectListItem> covertypeList = _unitofwork.CoverType.GetAll().Select(
+            //   u => new SelectListItem
+            //   {
+            //       Text = u.Name,
+            //       Value = u.Id.ToString()
+            //   });
+            if (id == null ||id==0)
+            {
+                //Create the Product
+                //return NotFound();
+                //ViewBag.categoryList = categoryList;
+                //ViewBag.covertypeList = covertypeList;
+                return View(productVm);
+            }
+            else
+            {
+                //Update the product
+
             }
             //var edit = _Db.GetFirstorDefault(x => x.Name == "id");
-            var edit = _unitofwork.Product.GetFirstorDefault(x => x.Id == id);
+            //var edit = _unitofwork.Product.GetFirstorDefault(x => x.Id == id);
 
-            if (edit == null)
-            {
-                return NotFound();
-            }
+            //if (edit == null)
+            //{
+            //    return NotFound();
+            //}
 
-            return View(edit);
+            //return View(edit);
+            
+            return View(productVm);
         }
 
         [HttpPost]
-        public IActionResult Edit(Product p)
+        public IActionResult Upsert(Product p)
         {
             _unitofwork.Product.Update(p);
             _unitofwork.Save();
