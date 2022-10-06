@@ -21,6 +21,7 @@ namespace BulkyBook.Models
         public string Author { get; set; }
         [Required]
         [Range(1,10000)]
+        [Display(Name = "List Price")]
         public Double ListPrice { get; set; }
         [Required]
         [Range(1, 10000)]

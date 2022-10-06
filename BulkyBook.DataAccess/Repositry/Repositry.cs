@@ -19,22 +19,37 @@ namespace BulkyBook.DataAccess.Repositry
         public Repositry(ApplicationDbContext Db)
         {
             _Db = Db;
+            //_Db.Products.Include(u => u.Category).Include(u => u.CoverType);
             this.dbSet = _Db.Set<T>();
         }
         public void Add(T entity)
         {
             dbSet.Add(entity);
         }
-
-        public IEnumerable<T> GetAll()
+        //IncludeProp (Category,CoverType)
+        public IEnumerable<T> GetAll(string? includeProperties = null)
         {
             IQueryable<T> query = dbSet;
+            if(includeProperties != null)
+            {
+                foreach(var includeProp in includeProperties.Split(new char[] {','}, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = query.Include(includeProp);
+                }
+            }
             return query.ToList();
         }
 
-        public T GetFirstorDefault(Expression<Func<T, bool>> Filter)
+        public T GetFirstorDefault(Expression<Func<T, bool>> Filter, string? includeProperties = null)
         {
             IQueryable<T> query = dbSet;
+            if (includeProperties != null)
+            {
+                foreach (var includeProp in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = query.Include(includeProp);
+                }
+            }
             query = query.Where(Filter);
             return query.FirstOrDefault();
         }

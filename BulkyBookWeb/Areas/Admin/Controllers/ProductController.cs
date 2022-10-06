@@ -28,9 +28,10 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
         public IActionResult Index()
         {
             //IEnumerable<Category> categories = _Db.GetAll();
-            IEnumerable<Product> products = _unitofwork.Product.GetAll();
+            //IEnumerable<Product> products = _unitofwork.Product.GetAll();
 
-            return View(products);
+            //return View(products);
+            return View();
         }
         [HttpGet]
         public IActionResult Create()
@@ -128,6 +129,9 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
             else
             {
                 //Update the product
+                productVm.Product=_unitofwork.Product.GetFirstorDefault(u=>u.Id==id);
+                return View(productVm);
+                
 
             }
             //var edit = _Db.GetFirstorDefault(x => x.Name == "id");
@@ -146,23 +150,40 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult Upsert(ProductVM p, IFormFile? file)
         {
-            string wwwRootPath = _hostEnvironment.WebRootPath;
             
-            if(file != null)
-            {
-                string fileName = Guid.NewGuid().ToString();
-                var uploads = Path.Combine(wwwRootPath,@"Images\Products");
-                var extension = Path.GetExtension(file.FileName);
-                using (var filestreams= new FileStream(Path.Combine(uploads, fileName + extension), FileMode.Create))
+                string wwwRootPath = _hostEnvironment.WebRootPath;
+
+                if (file != null)
                 {
-                    file.CopyTo(filestreams);
+                    string fileName = Guid.NewGuid().ToString();
+                    var uploads = Path.Combine(wwwRootPath, @"Images\Products");
+                    var extension = Path.GetExtension(file.FileName);
+                if (p.Product.ImageUrl != null)
+                {
+                    var oldImagePath = Path.Combine(wwwRootPath, p.Product.ImageUrl.TrimStart('\\'));
+                    if (System.IO.File.Exists(oldImagePath))
+                    {
+                        System.IO.File.Delete(oldImagePath);
+                    }
                 }
-                p.Product.ImageUrl= @"\Images\Products" + fileName + extension;
+                    using (var filestreams = new FileStream(Path.Combine(uploads, fileName + extension), FileMode.Create))
+                    {
+                        file.CopyTo(filestreams);
+                    }
+                    p.Product.ImageUrl = @"\Images\Products" + fileName + extension;
+                }
+            if (p.Product.Id == 0) 
+            {
+                _unitofwork.Product.Add(p.Product);
             }
-            _unitofwork.Product.Add(p.Product);
-            _unitofwork.Save();
-            TempData["Success"] = "Product Created Successfuly";
-            return RedirectToAction("Index");
+            else
+            {
+                _unitofwork.Product.Update(p.Product);
+            }
+                _unitofwork.Save();
+                TempData["Success"] = "Product Created Successfuly";
+                return RedirectToAction("Index");
+            
         }
 
 
@@ -188,6 +209,19 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
             return RedirectToAction("Index");
         }
 
+        #region
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            //var a = HttpContext.Request.Headers;
+            //int b = Int32.Parse("asd");
+           
+            var productList = _unitofwork.Product.GetAll(includeProperties:"Category,CoverType");
+            return Json(new { data = productList });
+            //return Ok(new {data = productList });
+            //return Ok(productList);
+        }
+        #endregion
 
     }
 }

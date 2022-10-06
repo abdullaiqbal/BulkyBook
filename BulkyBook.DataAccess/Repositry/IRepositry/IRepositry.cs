@@ -10,8 +10,8 @@ namespace BulkyBook.DataAccess.Repositry.IRepositry
     public interface IRepositry<T> where T : class
     {
         // T Category
-        T GetFirstorDefault(Expression<Func<T, bool>> Filter);
-        IEnumerable<T> GetAll();
+        T GetFirstorDefault(Expression<Func<T, bool>> Filter, string? includeProperties = null);
+        IEnumerable<T> GetAll(string? includeProperties = null);
         void Add(T entity);
         void Remove(T entity);
         void RemoveRange(IEnumerable<T> entity);
