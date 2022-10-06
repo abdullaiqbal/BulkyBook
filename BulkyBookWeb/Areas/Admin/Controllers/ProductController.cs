@@ -17,10 +17,12 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
     {
         //private readonly ICategoryRepositry _Db;
         private readonly IUnitOfWork _unitofwork;
-        public ProductController(IUnitOfWork unitofwork)
+        private readonly IWebHostEnvironment _hostEnvironment;
+        public ProductController(IUnitOfWork unitofwork, IWebHostEnvironment hostEnvironment)
         {
             //_Db = db;
             _unitofwork = unitofwork;
+            _hostEnvironment = hostEnvironment;
         }
 
         public IActionResult Index()
@@ -142,11 +144,24 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public IActionResult Upsert(Product p)
+        public IActionResult Upsert(ProductVM p, IFormFile? file)
         {
-            _unitofwork.Product.Update(p);
+            string wwwRootPath = _hostEnvironment.WebRootPath;
+            
+            if(file != null)
+            {
+                string fileName = Guid.NewGuid().ToString();
+                var uploads = Path.Combine(wwwRootPath,@"Images\Products");
+                var extension = Path.GetExtension(file.FileName);
+                using (var filestreams= new FileStream(Path.Combine(uploads, fileName + extension), FileMode.Create))
+                {
+                    file.CopyTo(filestreams);
+                }
+                p.Product.ImageUrl= @"\Images\Products" + fileName + extension;
+            }
+            _unitofwork.Product.Add(p.Product);
             _unitofwork.Save();
-            TempData["Success"] = "Cover Type Updated Successfuly";
+            TempData["Success"] = "Product Created Successfuly";
             return RedirectToAction("Index");
         }
 

@@ -9,13 +9,18 @@
 
 
 <hr />
-<div class="row center">
-    <h4 class="center">Upsert the Product</h4>
-    <div class="col-md-4">
-        <form asp-action="Upsert">
+<div class="row center mt-4">
+    @*<h4 class="center">Upset the Product</h4>*@
+    <div class="col-md-4 row pb-2">
+        @*<h4 class="center">@(Model.Product.Id != 0 ? "Edit" : "Create") the Product</h4>*@
+        <form method="post" enctype="multipart/form-data" asp-action="Upsert">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Product.Id" />
-            <div class="form-group">
+            <div>
+                <h4 class="center">@(Model.Product != null ? "Edit" : "Create") the Product</h4>
+            </div>
+            
+            <div class="form-group mb-3">
                 <label asp-for="Product.Title" class="control-label"></label>
                 <input asp-for="Product.Title" class="form-control" />
                 <span asp-validation-for="Product.Title" class="text-danger"></span>
@@ -57,6 +62,12 @@
             </div>
             <br/>
             <div class="form-group">
+                @*<label asp-for="Product.ImageUrl" class="control-label"></label>*@
+                <input type="file" id="UploadBox" name="file" class="form-control" />
+                @*<span asp-validation-for="Product.ImageUrl" class="text-danger"></span>*@
+            </div>
+            <br/>
+            <div class="form-group">
                 @*<label asp-for="CategoryId" class="control-label"></label>*@
                 @*<input asp-for="Price100" class="form-control" />*@
                 <select asp-for="Product.CategoryId" asp-items="@Model.CategoryList" class="form-select">
@@ -75,7 +86,14 @@
             </div>
             <br/>
             <div class="form-group center">
-                <input type="submit" value="Save" class="btn btn-primary btn-size" />
+                @if(Model.Product==null){
+
+                    @*<input type="submit" value="Create" class="btn btn-primary btn-size" />*@
+                <input type="submit" onclick="return ValidateInput()" class="btn btn-primary btn-size" />
+                }
+                else{
+                    <input type="submit" value="Update" class="btn btn-primary btn-size" />
+                }
             </div>
         </form>
     </div>
@@ -84,4 +102,25 @@
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        function ValidateInput() {
+            if (document.getElementById("UploadBox").value == "") {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Please upload an Image!',
+                    footer: '<a href="">Why do I have this issue?</a>'
+                });
+                return false;
+            }
+            return true;
+        }
+    </script>
+    }
 
