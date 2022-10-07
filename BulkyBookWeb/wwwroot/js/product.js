@@ -28,7 +28,7 @@ function loadDataTable() {
                     <a class="btn btn-primary"> Detail</a>
                 </span>
                  <span>
-                    <a class="btn btn-primary"> Delete</a>
+                    <a onClick=Delete('/Admin/Product/Delete/${data}') class="btn btn-primary"> Delete</a>
                  </span>
                    `
 
@@ -54,4 +54,33 @@ function loadDataTable() {
         //    { "coverType.name", "width": "15%" },
         //]
     });
+}
+function Delete(url) {
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            $.ajax({
+                url: url,
+                type: "DELETE",
+                success: function (data) {
+                    //datatables.ajax.reload();
+                    data.success = true;
+                    if (data.success) {
+                        datatables.ajax.reload();
+                        tostr.success(data.message);
+                    }
+                    else {
+                        tostr.error(data.message);
+                    }
+                }
+            })
+        }
+    })
 }
