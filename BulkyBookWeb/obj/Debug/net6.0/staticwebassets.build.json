@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UMLSnki1wqKcuKlyoApU2JgRErCz4rUM326z+MbknkY=",
+  "Hash": "7ezQpOV4duoww5Z59OKu9URzvWJpkfUnpRwQoUEOL2k=",
   "Source": "BulkyBookWeb",
   "BasePath": "_content/BulkyBookWeb",
   "Mode": "Default",
@@ -134,6 +134,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\Products\\44c9767b-cd70-40a3-a4de-51e0464acfd9.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\THE FUTURE TECH\\source\\repos\\BulkyBook\\BulkyBookWeb\\wwwroot\\Images\\Products\\a06c562a-0527-4af1-a499-510f1a250055.jpg",
+      "SourceId": "BulkyBookWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\THE FUTURE TECH\\source\\repos\\BulkyBook\\BulkyBookWeb\\wwwroot\\",
+      "BasePath": "_content/BulkyBookWeb",
+      "RelativePath": "Images/Products/a06c562a-0527-4af1-a499-510f1a250055.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Products\\a06c562a-0527-4af1-a499-510f1a250055.jpg"
     },
     {
       "Identity": "C:\\Users\\THE FUTURE TECH\\source\\repos\\BulkyBook\\BulkyBookWeb\\wwwroot\\js\\product.js",
