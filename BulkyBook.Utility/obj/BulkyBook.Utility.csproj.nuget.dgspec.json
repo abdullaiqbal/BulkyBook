@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\THE FUTURE TECH\\source\\repos\\BulkyBook\\BulkyBook.Utility\\BulkyBook.Utility.csproj": {}
+    "D:\\Development\\BulkyBook.Utility\\BulkyBook.Utility.csproj": {}
   },
   "projects": {
-    "C:\\Users\\THE FUTURE TECH\\source\\repos\\BulkyBook\\BulkyBook.Utility\\BulkyBook.Utility.csproj": {
+    "D:\\Development\\BulkyBook.Utility\\BulkyBook.Utility.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\THE FUTURE TECH\\source\\repos\\BulkyBook\\BulkyBook.Utility\\BulkyBook.Utility.csproj",
+        "projectUniqueName": "D:\\Development\\BulkyBook.Utility\\BulkyBook.Utility.csproj",
         "projectName": "BulkyBook.Utility",
-        "projectPath": "C:\\Users\\THE FUTURE TECH\\source\\repos\\BulkyBook\\BulkyBook.Utility\\BulkyBook.Utility.csproj",
+        "projectPath": "D:\\Development\\BulkyBook.Utility\\BulkyBook.Utility.csproj",
         "packagesPath": "C:\\Users\\THE FUTURE TECH\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\THE FUTURE TECH\\source\\repos\\BulkyBook\\BulkyBook.Utility\\obj\\",
+        "outputPath": "D:\\Development\\BulkyBook.Utility\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\THE FUTURE TECH\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -55,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

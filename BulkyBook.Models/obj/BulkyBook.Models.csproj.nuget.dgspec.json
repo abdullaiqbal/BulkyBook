@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\THE FUTURE TECH\\source\\repos\\BulkyBook\\BulkyBook.Models\\BulkyBook.Models.csproj": {}
+    "D:\\Development\\BulkyBook.Models\\BulkyBook.Models.csproj": {}
   },
   "projects": {
-    "C:\\Users\\THE FUTURE TECH\\source\\repos\\BulkyBook\\BulkyBook.Models\\BulkyBook.Models.csproj": {
+    "D:\\Development\\BulkyBook.Models\\BulkyBook.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\THE FUTURE TECH\\source\\repos\\BulkyBook\\BulkyBook.Models\\BulkyBook.Models.csproj",
+        "projectUniqueName": "D:\\Development\\BulkyBook.Models\\BulkyBook.Models.csproj",
         "projectName": "BulkyBook.Models",
-        "projectPath": "C:\\Users\\THE FUTURE TECH\\source\\repos\\BulkyBook\\BulkyBook.Models\\BulkyBook.Models.csproj",
+        "projectPath": "D:\\Development\\BulkyBook.Models\\BulkyBook.Models.csproj",
         "packagesPath": "C:\\Users\\THE FUTURE TECH\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\THE FUTURE TECH\\source\\repos\\BulkyBook\\BulkyBook.Models\\obj\\",
+        "outputPath": "D:\\Development\\BulkyBook.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\THE FUTURE TECH\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -61,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
