@@ -171,6 +171,10 @@ namespace BulkyBookWeb.Areas.Identity.Pages.Account
                 user.Name = Input.Name;
                 user.PhoneNumber = Input.PhoneNumber;
                 user.Role = Input.Role;
+                if (Input.Role == SD.Role_User_Com)
+                {
+                    user.CompanyId = Input.CompanyId;
+                }
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
@@ -215,7 +219,16 @@ namespace BulkyBookWeb.Areas.Identity.Pages.Account
                     ModelState.AddModelError(string.Empty, error.Description);
                 }
             }
-
+            Input.RoleList = _roleManager.Roles.Where(u => u.Name != SD.Role_User_Ind).Select(x => x.Name).Select(i => new SelectListItem
+            {
+                Text = i,
+                Value = i
+            });
+             Input.CompanyList = _unitOfWork.Company.GetAll().Select(i => new SelectListItem
+                {
+                    Text = i.Name,
+                    Value = i.Id.ToString()
+                });
             // If we got this far, something failed, redisplay form
             return Page();
         }
