@@ -24,6 +24,9 @@ using BulkyBook.Utility;
 using System.ComponentModel.Design;
 using System.Data;
 using System.Xml.Linq;
+using BulkyBook.DataAccess.Repositry;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using BulkyBook.DataAccess.Repositry.IRepositry;
 
 namespace BulkyBookWeb.Areas.Identity.Pages.Account
 {
@@ -36,6 +39,7 @@ namespace BulkyBookWeb.Areas.Identity.Pages.Account
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
         private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly IUnitOfWork _unitOfWork;
 
         public RegisterModel(
             UserManager<IdentityUser> userManager,
@@ -43,7 +47,8 @@ namespace BulkyBookWeb.Areas.Identity.Pages.Account
             SignInManager<IdentityUser> signInManager,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender,
-            RoleManager<IdentityRole> roleManager)
+            RoleManager<IdentityRole> roleManager,
+            IUnitOfWork unitOfWork)
         {
             _userManager = userManager;
             _userStore = userStore;
@@ -52,6 +57,7 @@ namespace BulkyBookWeb.Areas.Identity.Pages.Account
             _logger = logger;
             _emailSender = emailSender;
             _roleManager = roleManager;
+            _unitOfWork = unitOfWork;
         }
 
         /// <summary>
@@ -116,7 +122,10 @@ namespace BulkyBookWeb.Areas.Identity.Pages.Account
             public string PhoneNumber { get; set; }
             public int? CompanyId { get; set; }
             public string Role { get; set; }
+            [ValidateNever]
             public IEnumerable<SelectListItem> RoleList { get; set; }
+            [ValidateNever]
+            public IEnumerable<SelectListItem> CompanyList { get; set; }
         }
 
 
@@ -136,6 +145,11 @@ namespace BulkyBookWeb.Areas.Identity.Pages.Account
                 {
                     Text = i,
                     Value = i
+                }),
+                CompanyList = _unitOfWork.Company.GetAll().Select(i => new SelectListItem
+                {
+                    Text = i.Name,
+                    Value = i.Id.ToString()
                 })
             };
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
