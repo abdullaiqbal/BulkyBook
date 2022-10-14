@@ -4296,10 +4296,10 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "BulkyBook.Models": "1.0.0",
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.9",
-          "Microsoft.EntityFrameworkCore": "6.0.9",
-          "Microsoft.EntityFrameworkCore.Relational": "6.0.9",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.9"
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.10",
+          "Microsoft.EntityFrameworkCore": "6.0.10",
+          "Microsoft.EntityFrameworkCore.Relational": "6.0.10",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.10"
         },
         "compile": {
           "bin/placeholder/BulkyBook.DataAccess.dll": {}
@@ -4312,6 +4312,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.10",
           "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.2.0"
         },
         "compile": {
@@ -4319,6 +4320,19 @@
         },
         "runtime": {
           "bin/placeholder/BulkyBook.Models.dll": {}
+        }
+      },
+      "BulkyBook.Utility/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.UI": "6.0.10"
+        },
+        "compile": {
+          "bin/placeholder/BulkyBook.Utility.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BulkyBook.Utility.dll": {}
         }
       }
     }
@@ -11615,12 +11629,18 @@
       "type": "project",
       "path": "../BulkyBook.Models/BulkyBook.Models.csproj",
       "msbuildProject": "../BulkyBook.Models/BulkyBook.Models.csproj"
+    },
+    "BulkyBook.Utility/1.0.0": {
+      "type": "project",
+      "path": "../BulkyBook.Utility/BulkyBook.Utility.csproj",
+      "msbuildProject": "../BulkyBook.Utility/BulkyBook.Utility.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "BulkyBook.DataAccess >= 1.0.0",
       "BulkyBook.Models >= 1.0.0",
+      "BulkyBook.Utility >= 1.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 6.0.10",
       "Microsoft.AspNetCore.Identity.UI >= 6.0.10",
       "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation >= 6.0.10",
@@ -11636,11 +11656,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Development\\BulkyBookWeb\\BulkyBookWeb.csproj",
+      "projectUniqueName": "D:\\New\\Development\\BulkyBookWeb\\BulkyBookWeb.csproj",
       "projectName": "BulkyBookWeb",
-      "projectPath": "D:\\Development\\BulkyBookWeb\\BulkyBookWeb.csproj",
+      "projectPath": "D:\\New\\Development\\BulkyBookWeb\\BulkyBookWeb.csproj",
       "packagesPath": "C:\\Users\\THE FUTURE TECH\\.nuget\\packages\\",
-      "outputPath": "D:\\Development\\BulkyBookWeb\\obj\\",
+      "outputPath": "D:\\New\\Development\\BulkyBookWeb\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\THE FUTURE TECH\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -11657,11 +11677,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Development\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj": {
-              "projectPath": "D:\\Development\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj"
+            "D:\\New\\Development\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj": {
+              "projectPath": "D:\\New\\Development\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj"
             },
-            "D:\\Development\\BulkyBook.Models\\BulkyBook.Models.csproj": {
-              "projectPath": "D:\\Development\\BulkyBook.Models\\BulkyBook.Models.csproj"
+            "D:\\New\\Development\\BulkyBook.Models\\BulkyBook.Models.csproj": {
+              "projectPath": "D:\\New\\Development\\BulkyBook.Models\\BulkyBook.Models.csproj"
+            },
+            "D:\\New\\Development\\BulkyBook.Utility\\BulkyBook.Utility.csproj": {
+              "projectPath": "D:\\New\\Development\\BulkyBook.Utility\\BulkyBook.Utility.csproj"
             }
           }
         }

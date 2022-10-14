@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Development\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj": {}
+    "D:\\New\\Development\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj": {}
   },
   "projects": {
-    "D:\\Development\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj": {
+    "D:\\New\\Development\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Development\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj",
+        "projectUniqueName": "D:\\New\\Development\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj",
         "projectName": "BulkyBook.DataAccess",
-        "projectPath": "D:\\Development\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj",
+        "projectPath": "D:\\New\\Development\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj",
         "packagesPath": "C:\\Users\\THE FUTURE TECH\\.nuget\\packages\\",
-        "outputPath": "D:\\Development\\BulkyBook.DataAccess\\obj\\",
+        "outputPath": "D:\\New\\Development\\BulkyBook.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\THE FUTURE TECH\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Development\\BulkyBook.Models\\BulkyBook.Models.csproj": {
-                "projectPath": "D:\\Development\\BulkyBook.Models\\BulkyBook.Models.csproj"
+              "D:\\New\\Development\\BulkyBook.Models\\BulkyBook.Models.csproj": {
+                "projectPath": "D:\\New\\Development\\BulkyBook.Models\\BulkyBook.Models.csproj"
               }
             }
           }
@@ -46,25 +46,25 @@
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.9, )"
+              "version": "[6.0.10, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.9, )"
+              "version": "[6.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
-              "version": "[6.0.9, )"
+              "version": "[6.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.9, )"
+              "version": "[6.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.9, )"
+              "version": "[6.0.10, )"
             }
           },
           "imports": [
@@ -87,14 +87,14 @@
         }
       }
     },
-    "D:\\Development\\BulkyBook.Models\\BulkyBook.Models.csproj": {
+    "D:\\New\\Development\\BulkyBook.Models\\BulkyBook.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Development\\BulkyBook.Models\\BulkyBook.Models.csproj",
+        "projectUniqueName": "D:\\New\\Development\\BulkyBook.Models\\BulkyBook.Models.csproj",
         "projectName": "BulkyBook.Models",
-        "projectPath": "D:\\Development\\BulkyBook.Models\\BulkyBook.Models.csproj",
+        "projectPath": "D:\\New\\Development\\BulkyBook.Models\\BulkyBook.Models.csproj",
         "packagesPath": "C:\\Users\\THE FUTURE TECH\\.nuget\\packages\\",
-        "outputPath": "D:\\Development\\BulkyBook.Models\\obj\\",
+        "outputPath": "D:\\New\\Development\\BulkyBook.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\THE FUTURE TECH\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -123,6 +123,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
             "Microsoft.AspNetCore.Mvc.ViewFeatures": {
               "target": "Package",
               "version": "[2.2.0, )"

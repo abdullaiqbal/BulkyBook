@@ -15,6 +15,7 @@ namespace BulkyBook.DataAccess.Repositry
         public ICategoryRepositry Category { get; private set; }
         public ICoverTypeRepositry CoverType { get; private set; }
         public IProductRepositry Product { get; private set; }
+        public ICompanyRepositry Company { get; private set; }
 
         private readonly ApplicationDbContext _Db;
         public UnitOfWork(ApplicationDbContext db)
@@ -23,6 +24,7 @@ namespace BulkyBook.DataAccess.Repositry
             Category = new CategoryRepositry(_Db);
             CoverType = new CoverTypeRepositry(_Db);
             Product = new ProductRepositry(_Db);
+            Company = new CompanyRepositry(_Db);
         }
 
         public void Save()

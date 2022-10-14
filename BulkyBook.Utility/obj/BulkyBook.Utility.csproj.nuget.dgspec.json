@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Development\\BulkyBook.Utility\\BulkyBook.Utility.csproj": {}
+    "D:\\New\\Development\\BulkyBook.Utility\\BulkyBook.Utility.csproj": {}
   },
   "projects": {
-    "D:\\Development\\BulkyBook.Utility\\BulkyBook.Utility.csproj": {
+    "D:\\New\\Development\\BulkyBook.Utility\\BulkyBook.Utility.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Development\\BulkyBook.Utility\\BulkyBook.Utility.csproj",
+        "projectUniqueName": "D:\\New\\Development\\BulkyBook.Utility\\BulkyBook.Utility.csproj",
         "projectName": "BulkyBook.Utility",
-        "projectPath": "D:\\Development\\BulkyBook.Utility\\BulkyBook.Utility.csproj",
+        "projectPath": "D:\\New\\Development\\BulkyBook.Utility\\BulkyBook.Utility.csproj",
         "packagesPath": "C:\\Users\\THE FUTURE TECH\\.nuget\\packages\\",
-        "outputPath": "D:\\Development\\BulkyBook.Utility\\obj\\",
+        "outputPath": "D:\\New\\Development\\BulkyBook.Utility\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\THE FUTURE TECH\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

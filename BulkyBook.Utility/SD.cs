@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace BulkyBook.Utility
 {
-    internal class SD
+    public class SD
     {
+        public const string Role_User_Ind = "Individual";
+        public const string Role_User_Com = "Company";
+        public const string Role_Admin = "Admin";
+        public const string Role_Employee = "Employee";
     }
 }
