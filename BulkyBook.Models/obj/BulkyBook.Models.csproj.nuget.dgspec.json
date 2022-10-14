@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Development\\BulkyBook.Models\\BulkyBook.Models.csproj": {}
+    "D:\\New\\Development\\BulkyBook.Models\\BulkyBook.Models.csproj": {}
   },
   "projects": {
-    "D:\\Development\\BulkyBook.Models\\BulkyBook.Models.csproj": {
+    "D:\\New\\Development\\BulkyBook.Models\\BulkyBook.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Development\\BulkyBook.Models\\BulkyBook.Models.csproj",
+        "projectUniqueName": "D:\\New\\Development\\BulkyBook.Models\\BulkyBook.Models.csproj",
         "projectName": "BulkyBook.Models",
-        "projectPath": "D:\\Development\\BulkyBook.Models\\BulkyBook.Models.csproj",
+        "projectPath": "D:\\New\\Development\\BulkyBook.Models\\BulkyBook.Models.csproj",
         "packagesPath": "C:\\Users\\THE FUTURE TECH\\.nuget\\packages\\",
-        "outputPath": "D:\\Development\\BulkyBook.Models\\obj\\",
+        "outputPath": "D:\\New\\Development\\BulkyBook.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\THE FUTURE TECH\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
             "Microsoft.AspNetCore.Mvc.ViewFeatures": {
               "target": "Package",
               "version": "[2.2.0, )"

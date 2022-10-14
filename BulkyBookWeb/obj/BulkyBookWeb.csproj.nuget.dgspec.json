@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Development\\BulkyBookWeb\\BulkyBookWeb.csproj": {}
+    "D:\\New\\Development\\BulkyBookWeb\\BulkyBookWeb.csproj": {}
   },
   "projects": {
-    "D:\\Development\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj": {
+    "D:\\New\\Development\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Development\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj",
+        "projectUniqueName": "D:\\New\\Development\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj",
         "projectName": "BulkyBook.DataAccess",
-        "projectPath": "D:\\Development\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj",
+        "projectPath": "D:\\New\\Development\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj",
         "packagesPath": "C:\\Users\\THE FUTURE TECH\\.nuget\\packages\\",
-        "outputPath": "D:\\Development\\BulkyBook.DataAccess\\obj\\",
+        "outputPath": "D:\\New\\Development\\BulkyBook.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\THE FUTURE TECH\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Development\\BulkyBook.Models\\BulkyBook.Models.csproj": {
-                "projectPath": "D:\\Development\\BulkyBook.Models\\BulkyBook.Models.csproj"
+              "D:\\New\\Development\\BulkyBook.Models\\BulkyBook.Models.csproj": {
+                "projectPath": "D:\\New\\Development\\BulkyBook.Models\\BulkyBook.Models.csproj"
               }
             }
           }
@@ -46,25 +46,25 @@
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.9, )"
+              "version": "[6.0.10, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.9, )"
+              "version": "[6.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
-              "version": "[6.0.9, )"
+              "version": "[6.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.9, )"
+              "version": "[6.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.9, )"
+              "version": "[6.0.10, )"
             }
           },
           "imports": [
@@ -87,14 +87,14 @@
         }
       }
     },
-    "D:\\Development\\BulkyBook.Models\\BulkyBook.Models.csproj": {
+    "D:\\New\\Development\\BulkyBook.Models\\BulkyBook.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Development\\BulkyBook.Models\\BulkyBook.Models.csproj",
+        "projectUniqueName": "D:\\New\\Development\\BulkyBook.Models\\BulkyBook.Models.csproj",
         "projectName": "BulkyBook.Models",
-        "projectPath": "D:\\Development\\BulkyBook.Models\\BulkyBook.Models.csproj",
+        "projectPath": "D:\\New\\Development\\BulkyBook.Models\\BulkyBook.Models.csproj",
         "packagesPath": "C:\\Users\\THE FUTURE TECH\\.nuget\\packages\\",
-        "outputPath": "D:\\Development\\BulkyBook.Models\\obj\\",
+        "outputPath": "D:\\New\\Development\\BulkyBook.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\THE FUTURE TECH\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -123,6 +123,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
             "Microsoft.AspNetCore.Mvc.ViewFeatures": {
               "target": "Package",
               "version": "[2.2.0, )"
@@ -148,14 +152,75 @@
         }
       }
     },
-    "D:\\Development\\BulkyBookWeb\\BulkyBookWeb.csproj": {
+    "D:\\New\\Development\\BulkyBook.Utility\\BulkyBook.Utility.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Development\\BulkyBookWeb\\BulkyBookWeb.csproj",
-        "projectName": "BulkyBookWeb",
-        "projectPath": "D:\\Development\\BulkyBookWeb\\BulkyBookWeb.csproj",
+        "projectUniqueName": "D:\\New\\Development\\BulkyBook.Utility\\BulkyBook.Utility.csproj",
+        "projectName": "BulkyBook.Utility",
+        "projectPath": "D:\\New\\Development\\BulkyBook.Utility\\BulkyBook.Utility.csproj",
         "packagesPath": "C:\\Users\\THE FUTURE TECH\\.nuget\\packages\\",
-        "outputPath": "D:\\Development\\BulkyBookWeb\\obj\\",
+        "outputPath": "D:\\New\\Development\\BulkyBook.Utility\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\THE FUTURE TECH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\New\\Development\\BulkyBookWeb\\BulkyBookWeb.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\New\\Development\\BulkyBookWeb\\BulkyBookWeb.csproj",
+        "projectName": "BulkyBookWeb",
+        "projectPath": "D:\\New\\Development\\BulkyBookWeb\\BulkyBookWeb.csproj",
+        "packagesPath": "C:\\Users\\THE FUTURE TECH\\.nuget\\packages\\",
+        "outputPath": "D:\\New\\Development\\BulkyBookWeb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\THE FUTURE TECH\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -172,11 +237,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Development\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj": {
-                "projectPath": "D:\\Development\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj"
+              "D:\\New\\Development\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj": {
+                "projectPath": "D:\\New\\Development\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj"
               },
-              "D:\\Development\\BulkyBook.Models\\BulkyBook.Models.csproj": {
-                "projectPath": "D:\\Development\\BulkyBook.Models\\BulkyBook.Models.csproj"
+              "D:\\New\\Development\\BulkyBook.Models\\BulkyBook.Models.csproj": {
+                "projectPath": "D:\\New\\Development\\BulkyBook.Models\\BulkyBook.Models.csproj"
+              },
+              "D:\\New\\Development\\BulkyBook.Utility\\BulkyBook.Utility.csproj": {
+                "projectPath": "D:\\New\\Development\\BulkyBook.Utility\\BulkyBook.Utility.csproj"
               }
             }
           }

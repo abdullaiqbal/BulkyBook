@@ -11,6 +11,7 @@ namespace BulkyBook.DataAccess.Repositry.IRepositry
         ICategoryRepositry Category { get; }
         ICoverTypeRepositry CoverType { get; }
         IProductRepositry Product { get; }
+        ICompanyRepositry Company { get; }
         void Save();
     }
 }
